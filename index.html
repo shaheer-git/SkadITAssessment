@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Marketing Agency</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="./css/index.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script type="text/babel" src="./components/JobApplication.js"></script>
+    <script type="text/babel" src="./components/ApplicationsTable.js"></script>
+
+    <script type="text/babel">
+        const jobFormRoot = ReactDOM.createRoot(document.getElementById('job-application-root'));
+        const applicationTableRoot = ReactDOM.createRoot(document.getElementById('application-table-root'));
+
+        jobFormRoot.render(<JobApplication />);
+        applicationTableRoot.render(<ApplicationsTable />);
+    </script>
+</head>
+
+<body class="text-white">
+    <!-- Navigation -->
+    <nav class="w-full fixed z-50 bg-primary/80 backdrop-blur-sm animate-fade-in">
+        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <div class="ml-8">
+                <img src="./assets/Images/logo-company.png" alt="" srcset="">
+            </div>
+            <div class="hidden lg:flex space-x-8">
+                <a href="#" class="text-accent">Home</a>
+                <a href="#" class="hover:text-accent cursor-pointer">About Us</a>
+                <a href="#" class="hover:text-accent cursor-pointer">Services</a>
+                <a href="#" class="hover:text-accent cursor-pointer">Projects</a>
+                <a href="#" class="hover:text-accent cursor-pointer">Contact Us</a>
+                <a class="hover:text-accent cursor-pointer" id="view-table">View Table</a>
+            </div>
+            <div class="hidden md:block bg-white hover:py-0 py-2 rounded-full pt-0 mr-8">
+                <a href="#contact"
+                    class="bg-accent text-black hover-scale cursor-pointer px-6 py-2 rounded-full font-semibold hover:bg-opacity-90 border-black border">Contact
+                    Us</a>
+            </div>
+            <div class="md:hidden block bg-white py-1 hover:py-0 rounded-full pt-0 w-fit">
+                <a href="#"
+                    class="bg-accent text-black hover-scale cursor-pointer p-1 rounded-full font-medium flex items-center hover:bg-opacity-90 border border-black">
+
+                    <div class="bg-primary p-2 rounded-full">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="white"
+                            class="bi bi-telephone-fill" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd"
+                                d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.68.68 0 0 0 .178.643l2.457 2.457a.68.68 0 0 0 .644.178l2.189-.547a1.75 1.75 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.6 18.6 0 0 1-7.01-4.42 18.6 18.6 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877z">
+                            </path>
+                        </svg>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="w-full pt-20 pb-12 bg-primary flex items-center flex-wrap">
+        <div class="flex flex-col md:flex-row items-center justify-around px-4 md:px-12 relative flex-wrap gap-4">
+            <div class="w-full md:w-1/2 animate-slide-in">
+                <h1 class="text-center md:text-left text-3xl lg:text-6xl font-bold leading-tight mb-10 md:mb-20">We're
+                    here to Increase your Productivity</h1>
+                <p class="text-[#deded0] mb-8 w-full md:w-[383px] text-center md:text-left">We are a forward-thinking
+                    design studio, tailored to needs of the new generation. Our focus is on delivering innovative design
+                    solutions.</p>
+                <img src="./assets/SVG/banner/Line 1.svg" alt="" srcset=""
+                    class="absolute top-[24%] md:top[22%] lg:top-[40%] opacity-25 lg:opacity-100 md:left-0">
+                <div class="bg-white py-1 hover:py-0 rounded-full pt-0 w-fit">
+                    <a href="#"
+                        class="bg-accent text-black hover-scale cursor-pointer py-1 rounded-full font-medium flex items-center justify-between hover:bg-opacity-90 border border-black">
+                        <p class="px-8 font-semibold">Get a free consultaion Today</p>
+                        <div class="bg-primary p-2 rounded-full mr-2">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="white"
+                                class="bi bi-telephone-fill" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd"
+                                    d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.68.68 0 0 0 .178.643l2.457 2.457a.68.68 0 0 0 .644.178l2.189-.547a1.75 1.75 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.6 18.6 0 0 1-7.01-4.42 18.6 18.6 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877z" />
+                            </svg>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div>
+                <img src="./assets/Images/Hero Img.png" alt="Hero"
+                    class="rounded-lg h-[300px] md:h-[400px] mx-auto hover-scale">
+                <div class="absolute bottom-[1%] left-[40%]">
+                    <img src="./assets/SVG/banner/Sec-1-light-lime-curve-arrow.svg.svg" alt="Graph"
+                        class="w-64 opacity-25 lg:opacity-100">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Bridge Section -->
+    <section class="w-full py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="relative">
+                <h2 class="text-xl text-with-icon font-bold text-center mb-16 text-primary animate-fade-in text-wrap">We
+                    Aim To Bridge The Gap Between <br /> Business And The Digital World</h2>
+                <img src="./assets/SVG/Section 2/scribble.svg" alt="thumbsUp" srcset=""
+                    class="absolute top-6 bottom-0 opacity-25 lg:opacity-100">
+                <img src="./assets/SVG/Section 2/scribble final version-47.svg" alt="scribble" srcset=""
+                    class="absolute top-0 right-[-15px] opacity-25 lg:opacity-100">
+            </div>
+            <div class="flex items-center justify-around flex-wrap gap-2">
+                <div data-aos="fade-up" data-aos-anchor-placement="bottom-bottom">
+                    <img src="./assets/Images/Team Img 1.png" alt="" srcset="" class="h-[365px]">
+                </div>
+                <div class="flex items-center justify-around flex-col" data-aos="fade-up"
+                    data-aos-anchor-placement="bottom-bottom">
+                    <div class="flex items-center justify-between border-2 border-black border-b-0 p-4 rounded-t-xl">
+                        <img src="./assets/SVG/Section 2/Product Design Icon.svg" alt="" srcset="" class="p-4">
+                        <div class="flex flex-col gap-2">
+                            <p class="text-primary font-semibold">Product Design</p>
+                            <p class="text-primary font-normal">Lorem ipsum dolor sit amet dolor.
+                                elit.</p class="p-4">
+                            <p class="text-primary font-medium">Read more</p>
+                        </div>
+                    </div>
+                    <div class="flex items-center justify-between border-2 border-t border-black border-b-0 p-4">
+                        <img src="./assets/SVG/Section 2/Marketing Strategy.svg" alt="" srcset="" class="p-4">
+                        <div class="flex flex-col gap-2">
+                            <p class="text-primary font-semibold">Marketing Strategy</p>
+                            <p class="text-primary font-normal">Lorem ipsum dolor sit amet dolor.
+                                elit.</p>
+                            <p class="text-primary font-medium">Read more</p>
+                        </div>
+                    </div>
+                    <div class="flex items-center justify-between border-2 border-t border-black p-4 rounded-b-xl">
+                        <img src="./assets/SVG/Section 2/E-Commerce Icon.svg" alt="" srcset="" class="p-4">
+                        <div class="flex flex-col gap-2">
+                            <p class="text-primary font-semibold">E-Commerce</p>
+                            <p class="text-primary font-normal">Lorem ipsum dolor sit amet dolor.
+                                elit.</p>
+                            <p class="text-primary font-medium">Read more</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section class="w-full py-16 bg-white">
+        <div
+            class="container mx-auto px-4 flex flex-col md:flex-row items-center justify-around flex-wrap gap-4 md:gap-2 relative">
+            <div class="w-full md:w-1/2" data-aos="fade-right">
+                <h2 class="text-3xl font-bold mb-12 text-primary text-with-icon">About Benefits<br>get from CMS</h2>
+                <div class="flex flex-col gap-4">
+                    <div class="flex items-center gap-4">
+                        <div class="bg-accent p-2 w-fit rounded-full">
+                            <img src="./assets/SVG/Section 5/Down Arrow.svg" alt="">
+                        </div>
+                        <p class="text-primary font-medium">Expert Brand Consultaion to Maximize Impact</p>
+                    </div>
+                    <div class="flex items-center gap-4">
+                        <div class="bg-accent p-2 w-fit rounded-full">
+                            <img src="./assets/SVG/Section 5/Down Arrow.svg" alt="">
+                        </div>
+                        <p class="text-primary font-medium">Build a Strong Online Brand Presence</p>
+                    </div>
+                    <div class="flex items-center gap-4">
+                        <div class="bg-accent p-2 w-fit rounded-full">
+                            <img src="./assets/SVG/Section 5/Down Arrow.svg" alt="">
+                        </div>
+                        <p class="text-primary font-medium">Monthly Band Performance Reports</p>
+                    </div>
+                    <div class="flex items-center gap-4">
+                        <div class="bg-accent p-2 w-fit rounded-full">
+                            <img src="./assets/SVG/Section 5/Down Arrow.svg" alt="">
+                        </div>
+                        <p class="text-primary font-medium">Future-Proof Your Brand Strategy</p>
+                    </div>
+                    <div class="flex items-center gap-4">
+                        <div class="bg-accent p-2 w-fit rounded-full">
+                            <img src="./assets/SVG/Section 5/Down Arrow.svg" alt="">
+                        </div>
+                        <p class="text-primary font-medium">Seamless Brand Transactions and Collaborations</p>
+                    </div>
+                </div>
+                <img src="./assets/SVG/Section 3/scribble final version-107.svg" alt="" srcset=""
+                    class="absolute top-[5px] right-0 opacity-25 lg:opacity-100">
+            </div>
+            <div data-aos="fade-left">
+                <img src="./assets/Images/About us Image.png" alt="" srcset="" class="h-[365px]">
+            </div>
+            <img src="./assets/SVG/Section 3/scribble 2.svg" alt="" srcset=""
+                class="absolute top-[-65px] left-[65px] opacity-25 lg:opacity-100">
+            <img src="./assets/SVG/Section 3/scribble final version-139.svg" alt="" srcset=""
+                class="absolute top-[-65px] right-[95px] opacity-25 lg:opacity-100">
+            <img src="./assets/SVG/Section 3/scribble final version-77.svg opacity-25 lg:opacity-100" alt="" srcset=""
+                class="absolute bottom-[-25px] left-0">
+    </section>
+
+    <!-- Projects Section -->
+    <section class="w-full py-16 bg-primary">
+        <div class="container mx-auto px-4 relative">
+            <h2
+                class="text-3xl font-bold mb-12 text-center text-accent text-with-icon text-a-with-icon animate-fade-in">
+                We Handle A Diverse Array Of<br class="hidden md:block">Creative Projects</h2>
+            <div class="flex flex-col md:flex-row items-center justify-around gap-4 md:gap-2">
+                <div data-aos="flip-up"
+                    class="bg-no-repeat h-[300px] w-[80%] border-4 rounded-xl bg-local border-white flex items-end bg-[url('./assets/Images/Product-Design-Img.png')] hover-scale">
+                    <div class="p-4">
+                        <h4 class="font-bold">Product Design</h4>
+                        <p class="font-normal text-secondary">Developing the look and feel of physical products,
+                            aesthetics and functionality.</p>
+                    </div>
+                    <div class="p-4 mb-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor"
+                            class="bi bi-arrow-right" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd"
+                                d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8" />
+                        </svg>
+                    </div>
+                </div>
+                <div data-aos="flip-up"
+                    class="bg-no-repeat h-[300px] w-[80%] border-4 rounded-xl bg-local border-white flex items-end bg-[url('./assets/Images/Logo-and-Branding-Img.png')] hover-scale">
+                    <div class="p-4">
+                        <h4 class="font-bold">Logo and Branding</h4>
+                        <p class="font-normal text-secondary">Creating or refreshing a company's logo and developing a
+                            cohensive visual identity.</p>
+                    </div>
+                    <div class="p-4 mb-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor"
+                            class="bi bi-arrow-right" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd"
+                                d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8" />
+                        </svg>
+                    </div>
+                </div>
+                <div data-aos="flip-up"
+                    class="bg-no-repeat h-[300px] w-[80%] border-4 rounded-xl bg-local border-white flex items-end bg-[url('./assets/Images/UX-Design-Img.png')] hover-scale">
+                    <div class="p-4">
+                        <h4 class="font-bold">App UI/UX Design</h4>
+                        <p class="font-normal text-secondary">Designing the UI/UX for mobile apps and web applications
+                            to ensure usability &...</p>
+                    </div>
+                    <div class="p-4 mb-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor"
+                            class="bi bi-arrow-right" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd"
+                                d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8" />
+                        </svg>
+                    </div>
+                </div>
+            </div>
+            <div class="flex justify-center items-center">
+                <div class="w-[90%] flex items-center justify-center mt-8">
+                    <div class="w-1/6 border-2 border-accent rounded-l-lg"></div>
+                    <div class="w-5/6 border-2 border-[#313233] rounded-r-lg"></div>
+                </div>
+            </div>
+            <img src="./assets/SVG/Section 4/path88.svg" alt="" srcset=""
+                class="absolute top-10 left-0 opacity-25 lg:opacity-100">
+            <img src="./assets/SVG/Section 4/Stars (1).svg" alt="" srcset=""
+                class="absolute top-[-65px] left-[65px] opacity-25 lg:opacity-100">
+            <img src="./assets/SVG/Section 4/scribble final version-119.svg" alt="" srcset=""
+                class="absolute top-0 right-0 opacity-25 lg:opacity-100">
+            <img src="./assets/SVG/Section 4/Highlight 27.svg" alt="" srcset=""
+                class="absolute bottom-[-65px] left-0 opacity-25 lg:opacity-100">
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="w-full py-16 bg-white">
+        <div class="container mx-auto px-4 relative">
+            <h2 class="text-3xl font-bold mb-12 text-center text-primary text-with-icon animate-fade-in">Frequently
+                Asked Questions ?</h2>
+            <div class="flex flex-wrap flex-col md:flex-row items-center justify-center gap-10 w-full md:ml-6">
+                <div
+                    class="relative w-full md:w-auto animate-slide-in md:block flex items-center flex-wrap gap-2 justify-center">
+                    <img src="./assets/Images/img-2-BKIPDfMO.jpg.png" alt="" class="w-[313px] hover-scale"
+                        data-aos="zoom-in">
+                    <img src="./assets/Images/img-3-D9WM4-oN.jpg.png" alt=""
+                        class="w-[313px] md:h-auto h-[331px] md:w-[250px] md:absolute top-[156px] right-[10%] md:right-[229px] hover-scale"
+                        data-aos="zoom-in">
+                </div>
+                <div class="w-full md:w-[40%] flex flex-col gap-4 animate-slide-in">
+                    <div
+                        class="group border-2 border-black rounded-xl relative cursor-pointer h-[70px] hover:h-[100px] hover-scale p-4">
+                        <p class="font-medium text-primary">How Can Digital Marketing Benifit My Business?</p>
+                        <p class="text-primary hidden group-hover:block">It can increase brand visibility, drive website
+                            traffic, generate
+                            leads and ultimetly boots sales and revenue.</p>
+                        <img src="./assets/SVG/Section 5/Down Arrow.svg" alt="" class="absolute top-5 right-5">
+                    </div>
+                    <div
+                        class="group border-2 border-black rounded-xl relative cursor-pointer h-[70px] hover:h-[100px] hover-scale p-4">
+                        <p class="font-medium text-primary">Do I Need To Have A Large Budget For Digital Marketing?</p>
+                        <p class="text-primary hidden group-hover:block">Lorem ipsum, dolor sit amet consectetur
+                            adipisicing elit. Eum,
+                            impedit?</p>
+                        <img src="./assets/SVG/Section 5/Down Arrow.svg" alt="" class="absolute top-5 right-5">
+                    </div>
+                    <div
+                        class="group border-2 border-black rounded-xl relative cursor-pointer h-[70px] hover:h-[100px] hover-scale p-4">
+                        <p class="font-medium text-primary">Unique And Influential Design</p>
+                        <p class="text-primary hidden group-hover:block">Lorem ipsum, dolor sit amet consectetur
+                            adipisicing elit. Eum,
+                            impedit?</p>
+                        <img src="./assets/SVG/Section 5/Down Arrow.svg" alt="" class="absolute top-5 right-5">
+                    </div>
+                    <div
+                        class="group border-2 border-black rounded-xl relative cursor-pointer h-[70px] hover:h-[100px] hover-scale p-4">
+                        <p class="font-medium text-primary">The Power Of Influencer Marketing</p>
+                        <p class="text-primary hidden group-hover:block">Lorem ipsum, dolor sit amet consectetur
+                            adipisicing elit. Eum,
+                            impedit?</p>
+                        <img src="./assets/SVG/Section 5/Down Arrow.svg" alt="" class="absolute top-5 right-5">
+                    </div>
+                </div>
+            </div>
+            <img src="./assets/SVG/Section 5/scribble final version-61.svg" alt="" srcset=""
+                class="absolute top-0 left-0 opacity-25 lg:opacity-100">
+            <img src="./assets/SVG/Section 5/Star.svg" alt="" srcset=""
+                class="absolute top-[90px] left-[90px] hidden lg:inline-block">
+            <img src="./assets/SVG/Section 5/scribble final version-129.svg" alt="" srcset=""
+                class="absolute top-0 right-[150px] opacity-25 lg:opacity-100">
+            <img src="./assets/SVG/Section 5/Arrow.svg" alt="" srcset=""
+                class="absolute bottom-[-80px] left-[135px] md:left-[330px] opacity-25 lg:opacity-100">
+        </div>
+    </section>
+
+    <!-- Rating Section -->
+    <section class="w-full py-16 bg-white">
+        <div class="container mx-auto px-4 relative">
+            <h2
+                class="text-3xl font-bold mb-12 text-center text-primary text-b-with-icon text-with-icon animate-fade-in">
+                Happy Words From <br class="hidden md:block">Our Customer</h2>
+            <div class="flex items-center justify-center gap-6 md:gap-10 w-full">
+                <div class="flex gap-10 flex-wrap items-center justify-center">
+                    <div data-aos="zoom-in-down"
+                        class="border-2 border-black rounded-xl relative h-[290px] w-[300px] px-4 flex flex-col justify-between gap-8">
+                        <div>
+                            <div class="flex pt-4 pb-4 pr-2">
+                                <img src="./assets/SVG/Section 6/Vector.svg" alt="" srcset="" class="m-[5px]">
+                                <img src="./assets/SVG/Section 6/Vector.svg" alt="" srcset="" class="m-[5px]">
+                                <img src="./assets/SVG/Section 6/Vector.svg" alt="" srcset="" class="m-[5px]">
+                                <img src="./assets/SVG/Section 6/Vector.svg" alt="" srcset="" class="m-[5px]">
+                                <img src="./assets/SVG/Section 6/Vector.svg" alt="" srcset="" class="m-[5px]">
+                            </div>
+                            <p class="font-bold text-primary mb-2">Exceptional Service!</p>
+                            <p class="text-primary">Lorem ipsum dolor sit amet consectetur adipisicing elit. sed rem
+                                culpa. Ex iusto eligendi voluptate sed rem culpa.</p>
+                        </div>
+                        <div class="flex gap-4 mb-6">
+                            <img src="./assets/SVG/Section 6/Profile.png" alt="">
+                            <div>
+                                <p class="font-bold text-primary">Wade Warren</p>
+                                <p class="text-[#00000078]">USA, California</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div data-aos="zoom-in-down"
+                        class="border-2 border-black rounded-xl relative h-[290px] w-[300px] px-4 flex flex-col justify-around gap-8">
+                        <div>
+                            <div class="flex pt-4 pb-4 pr-2">
+                                <img src="./assets/SVG/Section 6/Vector.svg" alt="" srcset="" class="m-[5px]">
+                                <img src="./assets/SVG/Section 6/Vector.svg" alt="" srcset="" class="m-[5px]">
+                                <img src="./assets/SVG/Section 6/Vector.svg" alt="" srcset="" class="m-[5px]">
+                                <img src="./assets/SVG/Section 6/Vector.svg" alt="" srcset="" class="m-[5px]">
+                                <img src="./assets/SVG/Section 6/Vector.svg" alt="" srcset="" class="m-[5px]">
+                            </div>
+                            <p class="font-bold text-primary mb-2">Exceptional Service!</p>
+                            <p class="text-primary">Lorem ipsum dolor sit amet consectetur adipisicing elit. sed rem
+                                culpa. Ex iusto eligendi voluptate sed rem culpa.</p>
+                        </div>
+                        <div class="flex gap-4 mb-6">
+                            <img src="./assets/SVG/Section 6/Profile.png" alt="">
+                            <div>
+                                <p class="font-bold text-primary">Wade Warren</p>
+                                <p class="text-[#00000078]">USA, California</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div data-aos="zoom-in-down"
+                        class="border-2 border-black rounded-xl relative h-[290px] w-[300px] px-4 flex flex-col justify-around gap-8">
+                        <div>
+                            <div class="flex pt-4 pb-4 pr-2">
+                                <img src="./assets/SVG/Section 6/Vector.svg" alt="" srcset="" class="m-[5px]">
+                                <img src="./assets/SVG/Section 6/Vector.svg" alt="" srcset="" class="m-[5px]">
+                                <img src="./assets/SVG/Section 6/Vector.svg" alt="" srcset="" class="m-[5px]">
+                                <img src="./assets/SVG/Section 6/Vector.svg" alt="" srcset="" class="m-[5px]">
+                                <img src="./assets/SVG/Section 6/Vector.svg" alt="" srcset="" class="m-[5px]">
+                            </div>
+                            <p class="font-bold text-primary mb-2">Exceptional Service!</p>
+                            <p class="text-primary">Lorem ipsum dolor sit amet consectetur adipisicing elit. sed rem
+                                culpa. Ex iusto eligendi voluptate sed rem culpa.</p>
+                        </div>
+                        <div class="flex gap-4 mb-6">
+                            <img src="./assets/SVG/Section 6/Profile.png" alt="">
+                            <div>
+                                <p class="font-bold text-primary">Wade Warren</p>
+                                <p class="text-[#00000078]">USA, California</p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <img src="./assets/SVG/Section 6/scribble final version-27.svg" alt="" srcset=""
+                class="absolute top-[90px] left-[90px] rotate-[180deg] opacity-25 lg:opacity-100">
+            <img src="./assets/SVG/Section 6/scribble final version-27.svg" alt="" srcset=""
+                class="absolute bottom-[-55px] right-10 opacity-25 lg:opacity-100">
+        </div>
+    </section>
+
+    <!-- News & Blogs Section -->
+    <section class="w-full py-16 bg-white">
+        <div class="container mx-auto px-4 relative">
+            <h2 class="text-3xl font-bold mb-12 text-center text-primary text-b-with-icon text-with-icon">Our Latest
+                News & Blogs</h2>
+            <div class="flex items-center justify-center gap-10 w-full">
+                <div class="flex gap-10 flex-wrap items-center justify-center">
+                    <div data-aos="fade-up" data-aos-duration="7000"
+                        class="border-2 border-black rounded-xl relative w-[300px] flex flex-col justify-between gap-4">
+                        <div class="bg-[url('./assets/Images/Blog-Img-1.png')] h-[200px] rounded-t-xl">
+                        </div>
+                        <div class="flex gap-4">
+                            <div class="relative px-4 pb-4">
+                                <p class="font-bold text-primary">Wins 2023 good design <br>London Award</p>
+                                <p class="text-primary arrow-after-text text-small font-medium">Read More</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div data-aos="fade-up" data-aos-duration="7000"
+                        class="border-2 border-black rounded-xl relative w-[300px] flex flex-col justify-between gap-4">
+                        <div class="bg-[url('./assets/Images/Blog-Img-2.png')] h-[200px] rounded-t-xl">
+                        </div>
+                        <div class="flex gap-4">
+                            <div class="relative px-4 pb-4">
+                                <p class="font-bold text-primary">Wins 2023 good design <br>London Award</p>
+                                <p class="text-primary arrow-after-text text-small font-medium">Read More</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div data-aos="fade-up" data-aos-duration="7000"
+                        class="border-2 border-black rounded-xl relative w-[300px] flex flex-col justify-between gap-4">
+                        <div class="bg-[url('./assets/Images/Blog-Img-3.png')] h-[200px] rounded-t-xl">
+                        </div>
+                        <div class="flex gap-4">
+                            <div class="relative px-4 pb-4">
+                                <p class="font-bold text-primary">Wins 2023 good design <br>London Award</p>
+                                <p class="text-primary arrow-after-text text-small font-medium">Read More</p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <img src="./assets/SVG/Section 7/scribble final version-02.svg" alt="" srcset=""
+                class="absolute top-[35px] left-0 opacity-25 lg:opacity-100">
+            <img src="./assets/SVG/Section 7/Group.svg" alt="" srcset=""
+                class="absolute top-[55px] right-10 opacity-25 lg:opacity-100">
+            <img src="./assets/SVG/Section 7/scribble final version-90.svg" alt="" srcset=""
+                class="absolute bottom-[-55px] left-10 opacity-25 lg:opacity-100">
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="w-full py-16 bg-primary">
+        <div class="flex flex-col md:flex-row px-4 md:px-8 items-center justify-around relative gap-8 md:gap-0">
+            <div class="w-full md:w-[50%] animate-slide-in">
+                <h2 class="text-4xl font-bold mb-4 text-with-icon">Let's start a</h2>
+                <h2 class="text-4xl font-bold mb-4">project together</h2>
+                <p class="mb-8 text-wrap md:w-[58%]">We Collaborate closely with our clients to understand their goals,
+                    target
+                    audience and specific needs. Our creative expertise helps us turn these insight into tailored design
+                    solutions.</p>
+
+                <div class="flex items-center flex-col justify-center md:block">
+                    <div>
+                        <h4 class="font-semibold text-accent md:text-left text-center">Give us a call: </h4>
+                        <p class="md:text-left text-center">(123) 456-7890</p>
+                    </div>
+                    <div class="mt-2">
+                        <h4 class="font-semibold text-accent md:text-left text-center">Send us an email: </h4>
+                        <p class="md:text-left text-center">edificecms@email.com</p>
+                    </div>
+                    <div class="flex items-center gap-2 mt-4">
+                        <div class="rounded-full border border-white p-1">
+                            <img src="./assets/SVG/banner/twitter.svg" alt="">
+                        </div>
+                        <div class="rounded-full border border-white p-1">
+                            <img src="./assets/SVG/banner/facebook.svg" alt="" class="w-[16px] h-[16px]">
+                        </div>
+                        <div class="rounded-full border border-white p-1">
+                            <img src="./assets/SVG/banner/insta.svg" alt="">
+                        </div>
+                        <div class="rounded-full border border-white p-1">
+                            <img src="./assets/SVG/banner/linkedin.svg" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="w-full md:w-[40%]" data-aos="fade-zoom-in" data-aos-easing="ease-in-back" data-aos-delay="300"
+                data-aos-offset="0">
+                <div class="flex gap-6 md:gap-4 items-center justify-between p-4">
+                    <button class="learn-more">
+                        <span class="circle" aria-hidden="true">
+                            <span class="icon arrow"></span>
+                        </span>
+                        <span class="button-text">Contact</span>
+                    </button>
+                    <button class="learn-more">
+                        <span class="circle" aria-hidden="true">
+                            <span class="icon arrow"></span>
+                        </span>
+                        <span class="button-text">Career</span>
+                    </button>
+
+                </div>
+                <div class="flex">
+                    <div class="p-4" id="contact-root">
+                        <h4 class="my-4 text-xl">Send us a message</h4>
+                        <form class="space-y-6">
+                            <input type="text" placeholder="Your name"
+                                class="w-full p-4 bg-primary font-medium rounded-full focus:outline-none focus:ring-2 focus:ring-accent focus:border-none border border-white">
+                            <input type="email" placeholder="Your email address"
+                                class="w-full p-4 bg-primary font-medium rounded-full focus:outline-none focus:ring-2 focus:ring-accent focus:border-none border border-white">
+                            <input type="tel" placeholder="Your phone number"
+                                class="w-full p-4 bg-primary font-medium rounded-full focus:outline-none focus:ring-2 focus:ring-accent focus:border-none border border-white">
+                            <textarea placeholder="Type any queries" rows="6"
+                                class="w-full p-4 bg-primary font-medium rounded-xl focus:outline-none focus:ring-2 focus:ring-accent focus:border-none border border-white"></textarea>
+                            <div class="bg-white py-1 hover:py-0 rounded-full pt-0 w-full hover-scale cursor-pointer">
+                                <a href="#"
+                                    class="bg-accent text-black py-1 rounded-full font-medium flex items-center justify-between hover:bg-opacity-90 border border-black">
+                                    <p class="px-8 font-semibold">Send message</p>
+                                    <div class="bg-primary p-2 rounded-full mr-2">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="white"
+                                            class="bi bi-arrow-right" viewBox="0 0 16 16">
+                                            <path fill-rule="evenodd"
+                                                d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8" />
+                                        </svg>
+                                    </div>
+                                </a>
+                            </div>
+                        </form>
+                    </div>
+                    <!-- Job Application Section -->
+                    <div id="job-application-root" class="p-4 hidden"></div>
+                </div>
+            </div>
+            <img src="./assets/SVG/Footer/Sparkle.svg" alt="Sparkle"
+                class="absolute top-[-5%] left-0 opacity-25 lg:opacity-100">
+            <img src="./assets/SVG/Footer/Shining stars.svg" alt="Star"
+                class="absolute top-[-5%] right-0 opacity-25 lg:opacity-100">
+            <img src="./assets/SVG/Footer/path87.svg" alt="Star"
+                class="absolute bottom-[-12%] left-0 opacity-25 lg:opacity-100">
+            <img src="./assets/SVG/Footer/Sec-1-light-lime-curve-arrow.svg.svg" alt="Star"
+                class="absolute bottom-[15%] left-[25%] hidden lg:inline-block">
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-4 bg-primary">
+        <div class="flex items-center justify-between mx-auto p-6 border-t border-gray-800 w-[90%] flex-wrap">
+            <div class="md:mb-0 mb-4">
+                <img src="./assets/Images/logo-company.png" alt="" srcset="">
+            </div>
+            <p class="text-center text-white">© Copyright 2024. All Rights Reserved by edifica CMS</p>
+        </div>
+    </footer>
+
+    <!-- Dimmer background for job application -->
+    <div class="fixed top-0 bottom-0 left-0 right-0 bg-primary/80 backdrop-blur-sm h-screen w-screen z-[50] hidden"
+        id="dimbg"></div>
+    <div id="application-table-root" class="fixed top-[10%] left-[20%] z-[51] hidden"></div>
+    <script src="./js/index.js"></script>
+</body>
+
+</html>
