@@ -81,4 +81,9 @@ Referance for Job Appliaction section is integration
 - Lazy loading for table data
 - Debounced search functionality
 
+## How to run
+- You can use normal live server in vs code to run the project.
+- No need to do npm install and npm run dev
+
+
 This documentation provides an overview of the development process and implementation details. The project successfully combines modern React features with traditional web technologies while maintaining a cohesive and responsive user interface.
